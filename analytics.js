@@ -1,5 +1,5 @@
 (() => {
-  const GA_MEASUREMENT_ID = "G-REPLACE_COMPUTE_SITE";
+  const GA_MEASUREMENT_ID = "G-PMRMZBNLHJ";
   const isConfigured = /^G-[A-Z0-9]+$/i.test(GA_MEASUREMENT_ID) && !GA_MEASUREMENT_ID.includes("REPLACE");
 
   window.dataLayer = window.dataLayer || [];
