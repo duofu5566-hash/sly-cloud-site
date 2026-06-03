@@ -1,5 +1,6 @@
 const header = document.querySelector("[data-header]");
 const counters = document.querySelectorAll("[data-count]");
+const languageSelects = document.querySelectorAll(".language-select");
 
 const syncHeader = () => {
   if (!header) return;
@@ -25,6 +26,12 @@ const animateCounters = () => {
 
 syncHeader();
 window.addEventListener("scroll", syncHeader, { passive: true });
+
+languageSelects.forEach((select) => {
+  select.addEventListener("change", () => {
+    if (select.value) window.location.href = select.value;
+  });
+});
 
 if ("IntersectionObserver" in window) {
   const observer = new IntersectionObserver(

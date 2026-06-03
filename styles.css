@@ -109,8 +109,7 @@ img {
 
 .nav a,
 .header-cta,
-.language-menu summary,
-.language-menu-panel a,
+.language-select,
 .btn,
 .solution-card a {
   transition: transform 160ms ease, border-color 160ms ease, background 160ms ease, color 160ms ease;
@@ -139,62 +138,30 @@ img {
   gap: 10px;
 }
 
-.language-menu {
-  position: relative;
-}
-
-.language-menu summary {
-  display: inline-flex;
-  min-width: 132px;
+.language-select {
+  min-width: 150px;
   min-height: 44px;
-  align-items: center;
-  justify-content: center;
   border: 1px solid rgba(255, 255, 255, 0.24);
   border-radius: 8px;
+  padding: 0 34px 0 13px;
   background: rgba(255, 255, 255, 0.06);
   color: var(--white);
-  font-size: 13px;
-  font-weight: 950;
-  cursor: pointer;
-  list-style: none;
-}
-
-.language-menu summary::after {
-  margin-left: 8px;
-  color: var(--green);
-  content: "▾";
-  font-size: 11px;
-}
-
-.language-menu summary::-webkit-details-marker {
-  display: none;
-}
-
-.language-menu-panel {
-  position: absolute;
-  top: calc(100% + 10px);
-  left: 0;
-  display: grid;
-  width: 190px;
-  padding: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  border-radius: 8px;
-  background: rgba(7, 10, 8, 0.96);
-  box-shadow: var(--shadow);
-  backdrop-filter: blur(16px);
-}
-
-.language-menu-panel a {
-  padding: 9px 10px;
-  border-radius: 6px;
-  color: rgba(255, 255, 255, 0.82);
+  font: inherit;
   font-size: 13px;
   font-weight: 850;
+  cursor: pointer;
+  outline: none;
 }
 
-.language-menu-panel a:hover {
-  background: rgba(163, 255, 18, 0.1);
-  color: var(--green);
+.language-select:hover,
+.language-select:focus {
+  border-color: rgba(163, 255, 18, 0.46);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.language-select option {
+  color: #0b1208;
+  background: #fff;
 }
 
 .header-cta {
@@ -705,9 +672,9 @@ h3 {
     display: none;
   }
 
-  .language-menu summary {
-    min-width: 94px;
-    padding: 0 10px;
+  .language-select {
+    min-width: 112px;
+    padding-left: 10px;
     font-size: 12px;
   }
 
