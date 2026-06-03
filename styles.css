@@ -48,9 +48,9 @@ img {
   left: 0;
   z-index: 30;
   display: grid;
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: auto auto 1fr auto;
   align-items: center;
-  gap: 24px;
+  gap: 18px;
   padding: 18px clamp(18px, 4vw, 56px);
   color: var(--white);
   transition: background 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
@@ -145,7 +145,7 @@ img {
 
 .language-menu summary {
   display: inline-flex;
-  width: 46px;
+  min-width: 132px;
   min-height: 44px;
   align-items: center;
   justify-content: center;
@@ -159,6 +159,13 @@ img {
   list-style: none;
 }
 
+.language-menu summary::after {
+  margin-left: 8px;
+  color: var(--green);
+  content: "▾";
+  font-size: 11px;
+}
+
 .language-menu summary::-webkit-details-marker {
   display: none;
 }
@@ -166,7 +173,7 @@ img {
 .language-menu-panel {
   position: absolute;
   top: calc(100% + 10px);
-  right: 0;
+  left: 0;
   display: grid;
   width: 190px;
   padding: 8px;
@@ -665,6 +672,10 @@ h3 {
     grid-template-columns: 1fr auto;
   }
 
+  .header-language {
+    justify-self: end;
+  }
+
   .nav {
     display: none;
   }
@@ -695,7 +706,9 @@ h3 {
   }
 
   .language-menu summary {
-    width: 44px;
+    min-width: 94px;
+    padding: 0 10px;
+    font-size: 12px;
   }
 
   .hero-content {
