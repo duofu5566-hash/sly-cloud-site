@@ -1,5 +1,6 @@
 const header = document.querySelector("[data-header]");
 const counters = document.querySelectorAll("[data-count]");
+const languageMenus = document.querySelectorAll(".language-menu");
 
 const syncHeader = () => {
   if (!header) return;
@@ -25,6 +26,12 @@ const animateCounters = () => {
 
 syncHeader();
 window.addEventListener("scroll", syncHeader, { passive: true });
+
+document.addEventListener("click", (event) => {
+  languageMenus.forEach((menu) => {
+    if (!menu.contains(event.target)) menu.removeAttribute("open");
+  });
+});
 
 if ("IntersectionObserver" in window) {
   const observer = new IntersectionObserver(
