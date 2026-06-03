@@ -1,0 +1,7 @@
+name = "sly-cloud-site"
+compatibility_date = "2026-06-03"
+workers_dev = true
+
+[assets]
+directory = "./public"
+not_found_handling = "single-page-application"
