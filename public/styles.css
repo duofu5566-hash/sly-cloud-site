@@ -109,6 +109,8 @@ img {
 
 .nav a,
 .header-cta,
+.language-menu summary,
+.language-menu-panel a,
 .btn,
 .solution-card a {
   transition: transform 160ms ease, border-color 160ms ease, background 160ms ease, color 160ms ease;
@@ -128,6 +130,64 @@ img {
   border-radius: 8px;
   font-weight: 850;
   white-space: nowrap;
+}
+
+.header-tools {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.language-menu {
+  position: relative;
+}
+
+.language-menu summary {
+  display: inline-flex;
+  width: 46px;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--white);
+  font-size: 13px;
+  font-weight: 950;
+  cursor: pointer;
+  list-style: none;
+}
+
+.language-menu summary::-webkit-details-marker {
+  display: none;
+}
+
+.language-menu-panel {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  display: grid;
+  width: 190px;
+  padding: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 8px;
+  background: rgba(7, 10, 8, 0.96);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(16px);
+}
+
+.language-menu-panel a {
+  padding: 9px 10px;
+  border-radius: 6px;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 13px;
+  font-weight: 850;
+}
+
+.language-menu-panel a:hover {
+  background: rgba(163, 255, 18, 0.1);
+  color: var(--green);
 }
 
 .header-cta {
@@ -236,7 +296,7 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-  margin: 30px 0;
+  margin: 30px 0 16px;
 }
 
 .btn {
@@ -259,6 +319,41 @@ h3 {
   border-color: rgba(5, 7, 6, 0.16);
   background: #0b0e0c;
   color: var(--white);
+}
+
+.hero-language-picks {
+  display: flex;
+  width: min(820px, 100%);
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 20px;
+}
+
+.hero-language-picks span,
+.hero-language-picks a {
+  display: inline-flex;
+  min-height: 34px;
+  align-items: center;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 850;
+}
+
+.hero-language-picks span {
+  color: var(--green);
+}
+
+.hero-language-picks a {
+  padding: 0 11px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.hero-language-picks a:hover {
+  border-color: rgba(163, 255, 18, 0.4);
+  color: var(--green);
 }
 
 .partner-strip {
@@ -597,6 +692,10 @@ h3 {
   .brand small,
   .header-cta {
     display: none;
+  }
+
+  .language-menu summary {
+    width: 44px;
   }
 
   .hero-content {
