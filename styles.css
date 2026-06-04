@@ -673,7 +673,10 @@ h3 {
   .provider-panel,
   .contact-grid,
   .footer-grid,
-  .resource-grid {
+  .resource-grid,
+  .asia-country-grid,
+  .asia-cluster-grid,
+  .seo-copy-grid {
     grid-template-columns: 1fr;
   }
 
@@ -765,6 +768,28 @@ h3 {
 .keyword-grid { display: flex; flex-wrap: wrap; gap: 10px; }
 .keyword-chip { display: inline-flex; padding: 9px 12px; border: 1px solid var(--line-dark); border-radius: 8px; background: #f5f7f2; color: #172015; font-size: 13px; font-weight: 850; }
 .seo-disclaimer { margin: 22px 0 0; font-size: 14px; }
+.asia-seo-layout { display: grid; gap: 18px; }
+.asia-country-grid,
+.asia-cluster-grid,
+.seo-copy-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.seo-copy-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.asia-country-card,
+.asia-cluster-card,
+.seo-copy-block { padding: 20px; border: 1px solid var(--line-dark); border-radius: 8px; background: #fff; box-shadow: 0 12px 30px rgba(5, 7, 6, .06); }
+.asia-country-card span,
+.asia-cluster-card span { color: #457a00; font-size: 12px; font-weight: 950; text-transform: uppercase; }
+.asia-country-card h3,
+.asia-cluster-card h3,
+.seo-copy-block h3 { margin: 8px 0; color: var(--ink); }
+.asia-country-card p,
+.asia-cluster-card p,
+.seo-copy-block p { color: var(--muted-dark); }
+.asia-country-card a { color: #457a00; font-weight: 900; }
+.seo-table { display: grid; overflow: hidden; border: 1px solid var(--line-dark); border-radius: 8px; background: #fff; }
+.seo-table-row { display: grid; grid-template-columns: 180px 1fr; gap: 16px; padding: 16px 18px; border-bottom: 1px solid var(--line-dark); }
+.seo-table-row:last-child { border-bottom: 0; }
+.seo-table-row strong { color: var(--ink); }
+.seo-table-row span { color: var(--muted-dark); }
 .subpage-main { padding-top: 76px; }
 .sub-hero { min-height: 68vh; background: #080b09; }
 .sub-hero-grid { display: grid; grid-template-columns: 1fr .82fr; gap: 44px; align-items: center; }
@@ -777,3 +802,4 @@ h3 {
 .market-facts strong { display:block; margin: 8px 0; font-size: 24px; }
 @media (max-width: 980px) { .market-grid, .sub-hero-grid { grid-template-columns: 1fr; } }
 @media (max-width: 640px) { .market-grid { grid-template-columns: 1fr; } .whatsapp-float { right: 14px; bottom: 14px; left: 14px; } }
+@media (max-width: 640px) { .seo-table-row { grid-template-columns: 1fr; gap: 6px; } }
