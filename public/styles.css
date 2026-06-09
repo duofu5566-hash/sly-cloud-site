@@ -676,7 +676,8 @@ h3 {
   .resource-grid,
   .asia-country-grid,
   .asia-cluster-grid,
-  .seo-copy-grid {
+  .seo-copy-grid,
+  .core-seo-grid {
     grid-template-columns: 1fr;
   }
 
@@ -790,6 +791,16 @@ h3 {
 .seo-table-row:last-child { border-bottom: 0; }
 .seo-table-row strong { color: var(--ink); }
 .seo-table-row span { color: var(--muted-dark); }
+.core-seo-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+.core-seo-card { padding: 22px; border: 1px solid var(--line-dark); border-radius: 8px; background: #fff; box-shadow: 0 12px 30px rgba(5, 7, 6, .06); }
+.core-seo-card span { color: #457a00; font-size: 12px; font-weight: 950; text-transform: uppercase; }
+.core-seo-card h3 { margin: 8px 0; color: var(--ink); }
+.core-seo-card p { color: var(--muted-dark); }
+.core-seo-card a { color: #457a00; font-weight: 900; }
+.faq-grid { display: grid; gap: 12px; }
+.faq-item { padding: 18px; border: 1px solid var(--line-dark); border-radius: 8px; background: #fff; }
+.faq-item h3 { margin: 0 0 8px; color: var(--ink); font-size: 19px; }
+.faq-item p { margin: 0; color: var(--muted-dark); }
 .subpage-main { padding-top: 76px; }
 .sub-hero { min-height: 68vh; background: #080b09; }
 .sub-hero-grid { display: grid; grid-template-columns: 1fr .82fr; gap: 44px; align-items: center; }
